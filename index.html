@@ -28,7 +28,7 @@
                     <input type="button" value="4" onclick="valueToDisplay('4')">
                     <input type="button" value="5" onclick="valueToDisplay('5')">
                     <input type="button" value="6" onclick="valueToDisplay('6')">
-                    <input type="button" value="-" onclick="valueToDisplay('7')">
+                    <input type="button" value="-" onclick="valueToDisplay('-')">
                 </div>
                 <div>
                     <input type="button" value="1" onclick="valueToDisplay('1')">
@@ -53,7 +53,7 @@
             document.getElementById('display').value = '';
         }
 
-        function deleteLastCharacter() {
+        function deleteLast() {
             var display = document.getElementById('display');
             display.value = display.value.slice(0, -1);
         }
