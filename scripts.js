@@ -1,14 +1,17 @@
-let display = document.getElementById('display');
-
 function clearDisplay() {
-    display.value = '';
+    document.getElementById('display').value = '';
 }
 function deleteLast() {
-    display.value = display.value.slice(0,-1);
+    let display = document.getElementById('display');
+    display.value = display.value.slice(0, -1);
 }
 function valueToDisplay(value) {
-    display.value += value;
+    document.getElementById('display').value += value;
 }
 function calculate() {
-    display.value = eval(display.value);
+    try {
+        document.getElementById('display').value = eval(document.getElementById('display').value);
+    } catch (error) {
+        document.getElementById('display').value = 'Error';
+    }
 }
